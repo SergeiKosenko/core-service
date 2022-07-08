@@ -50,13 +50,13 @@ public class User {
 //    @JoinTable(name = "educations",
 //            joinColumns = @JoinColumn(name = "user_id"))
 //    private List<Education> educations;
-
-    @CreationTimestamp
-    @Column(name = "created_at")
-    private LocalDateTime created_at;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at")
-    private LocalDateTime updated_at;
+//
+//    @CreationTimestamp
+//    @Column(name = "created_at")
+//    private LocalDateTime created_at;
+//
+//    @UpdateTimestamp
+//    @Column(name = "updated_at")
+//    private LocalDateTime updated_at;
 
 }

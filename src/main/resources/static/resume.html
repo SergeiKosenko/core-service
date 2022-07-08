@@ -33,36 +33,54 @@
 </div>
 <div class="contact">
     <div class="container">
-        <div class="contactlist__container">
-            <div class="contactlist-right">
-                <div class="contactlist-right-container">
+        <div class="contactlist__container" ng-controller = "resumeController">
+            <div class="contactlist-right" ng-controller = "resumeController">
+                <div class="contactlist-right-container" ng-controller = "resumeController">
                     <h4 class="head_text_message">ОСНОВНАЯ ИНФОРМАЦИЯ</h4>
-                    <form action="#">
-                        <p class="full__name">Имя</p>
-                        <input class="contactlist__message_name_input" type="text" placeholder="Имя">
-                        <p class="full__name">Фамилия</p>
-                        <input class="contactlist__message_name_input" type="text" placeholder="Фамилия">
-                        <p class="full__name">Отчество</p>
-                        <input class="contactlist__message_name_input" type="text" placeholder="Отчество">
+                    <form ng-submit="createNewResume()">
                         <p></p>
-                        <a href="#" class="contactlist__message_name_button" type="submit">Отправить</a>
+                        <input class="contactlist__message_name_input" type="text" id="newFirstName" ng-model="newResume.userfirstname" placeholder="Имя">
+                        <input class="contactlist__message_name_input" type="text" id="newLastName" ng-model="newResume.userlastname" placeholder="Фамилия">
+                        <input class="contactlist__message_name_input" type="password" id="newPassword" ng-model="newResume.password" placeholder="Пароль">
+
+                        <input class="contactlist__message_name_input" type="email" id="newEmail" ng-model="newResume.email" placeholder="mail@mail.ru">
+                        <input class="contactlist__message_name_input" type="text" id="newGender" ng-model="newResume.gender" placeholder="Муж/Жен">
+                        <input class="contactlist__message_name_input" type="date" id="newDateofbirth" ng-model="newResume.dateofbirth" placeholder=Дата Рождения>
+                        <input class="contactlist__message_name_input" type="text" id="newPhoto" ng-model="newResume.photo" placeholder="Фото">
+                        <p></p>
+                        <button class="contactlist__message_name_button" type="submit">Отправить</button>
                     </form>
                 </div>
-            </div>
-            <div class="contactlist-right">
+
                 <div class="contactlist-right-container">
-                    <h4 class="head_text_message">ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h4>
-                    <form action="#">
-                        <p class="full__name">Телефон</p>
-                        <input class="contactlist__message_name_input" type="email" placeholder="+7 (900) 333 22 22">
-                        <p class="full__name">Дата рождения</p>
-                        <input class="contactlist__message_name_input" type="text" placeholder="Дата рождения">
-                        <p class="full__name">Email</p>
-                        <input class="contactlist__message_name_input" type="email" placeholder="Email@mail.ru">
-                        <p></p>
-                        <a href="#" class="contactlist__message_name_button" type="submit">Отправить</a>
-                    </form>
-                </div>
+                                        <h4 class="head_text_message">ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h4>
+                                        <form action="#">
+                                            <p class="full__name">Телефон</p>
+                                            <input class="contactlist__message_name_input" type="email" placeholder="+7 (900) 333 22 22">
+                                            <p class="full__name">Дата рождения</p>
+                                            <input class="contactlist__message_name_input" type="text" placeholder="Дата рождения">
+                                            <p class="full__name">Email</p>
+                                            <input class="contactlist__message_name_input" type="email" placeholder="Email@mail.ru">
+                                            <p></p>
+                                            <a href="#" class="contactlist__message_name_button" type="submit">Отправить</a>
+                                        </form>
+
+
+            </div>
+<!--            <div class="contactlist-right">-->
+<!--                <div class="contactlist-right-container">-->
+<!--                    <h4 class="head_text_message">ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h4>-->
+<!--                    <form action="#">-->
+<!--                        <p class="full__name">Телефон</p>-->
+<!--                        <input class="contactlist__message_name_input" type="email" placeholder="+7 (900) 333 22 22">-->
+<!--                        <p class="full__name">Дата рождения</p>-->
+<!--                        <input class="contactlist__message_name_input" type="text" placeholder="Дата рождения">-->
+<!--                        <p class="full__name">Email</p>-->
+<!--                        <input class="contactlist__message_name_input" type="email" placeholder="Email@mail.ru">-->
+<!--                        <p></p>-->
+<!--                        <a href="#" class="contactlist__message_name_button" type="submit">Отправить</a>-->
+<!--                    </form>-->
+<!--                </div>-->
             </div>
         </div>
         <div class="contactlist__container">

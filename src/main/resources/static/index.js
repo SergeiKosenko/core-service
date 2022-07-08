@@ -1,28 +1,13 @@
-angular.module('resume', ['ngStorage']).controller('indexController', function ($scope, $http, $localStorage) {
-    if ($localStorage.marchMarketUser) {
-        try {
-            let jwt = $localStorage.marchMarketUser.token;
-            let payload = JSON.parse(atob(jwt.split('.')[1]));
-            let currentTime = parseInt(new Date().getTime() / 1000);
-            if (currentTime > payload.exp) {
-                console.log("Token is expired!!!");
-                delete $localStorage.marchMarketUser;
-                $http.defaults.headers.common.Authorization = '';
-            }
-        } catch (e) {
-        }
+angular.module('resume', []).controller('resumeController', function ($scope, $http) {
+const contextPath = 'http://localhost:8888/resume-core'
 
-        if ($localStorage.marchMarketUser) {
-            $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.marchMarketUser.token;
-        }
+    $scope.createNewResume = function () {
+        console.log($scope.newResume);
+        $http.post('http://localhost:8888/resume-core/api/users', $scope.newResume)
+            .then(function response(){
+                $scope.newResume = null;
+            });
     }
 
-    $scope.isUserLoggedIn = function () {
-        if ($localStorage.marchMarketUser) {
-            return true;
-        } else {
-            return false;
-        }
-    };
 	
 });

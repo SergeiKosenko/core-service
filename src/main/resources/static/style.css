@@ -160,9 +160,9 @@ body {
     margin-top: 71px;
 }
 
-.that-we-do {
-    padding-top: 64px;
-}
+/*.that-we-do {*/
+/*    padding-top: 64px;*/
+/*}*/
 
 .heading {
     font-weight: 300;
@@ -313,7 +313,7 @@ body {
 }
 
 .contactlist-right {
-    height: 800px;
+    height: 1800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

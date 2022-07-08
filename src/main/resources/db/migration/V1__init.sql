@@ -5,11 +5,11 @@ create table users
     userfirstname varchar(36) not null,
     userlastname  varchar(36) not null,
     password      varchar(16) not null,
-    gender        char        not null,
+    gender        char,
     dateofbirth   timestamp,
-    email         varchar(50) unique,
-    created_at    timestamp default current_timestamp,
-    updated_at    timestamp default current_timestamp
+    email         varchar(50) unique
+--     created_at    timestamp default current_timestamp,
+--     updated_at    timestamp default current_timestamp
 );
 
 create table works
