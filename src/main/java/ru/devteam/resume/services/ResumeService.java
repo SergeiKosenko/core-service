@@ -1,9 +1,9 @@
-package ru.devteam.service;
+package ru.devteam.resume.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.devteam.entities.Resume;
-import ru.devteam.repository.ResumeRepository;
+import ru.devteam.resume.entities.Resume;
+import ru.devteam.resume.repositories.ResumeRepository;
 
 import java.util.List;
 

@@ -1,16 +1,16 @@
-package ru.devteam.controllers;
+package ru.devteam.resume.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.devteam.entities.Education;
-import ru.devteam.service.EducationService;
+import ru.devteam.resume.entities.Education;
+import ru.devteam.resume.services.EducationService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/educations")
+@RequestMapping("/api/v1/educations")
 @RequiredArgsConstructor
 public class EducationController {
     private final EducationService educationService;

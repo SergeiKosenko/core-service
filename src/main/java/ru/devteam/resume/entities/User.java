@@ -1,13 +1,10 @@
-package ru.devteam.entities;
+package ru.devteam.resume.entities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -23,11 +20,11 @@ public class User {
     @Column(name = "photo")
     private String photo;
 
-    @Column(name = "userfirstname")
-    private String userfirstname;
+    @Column(name = "firstname")
+    private String firstname;
 
-    @Column(name = "userlastname")
-    private String userlastname;
+    @Column(name = "lastname")
+    private String lastname;
 
     @Column(name = "password")
     private String password;
@@ -40,6 +37,8 @@ public class User {
 
     @Column(name = "email")
     private String email;
+
+
 
 //    @OneToMany
 //    @JoinTable(name = "works",

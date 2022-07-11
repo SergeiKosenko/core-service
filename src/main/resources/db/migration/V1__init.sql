@@ -2,11 +2,11 @@ create table users
 (
     id            bigserial primary key,
     photo         varchar(200),
-    userfirstname varchar(36) not null,
-    userlastname  varchar(36) not null,
+    firstname varchar(36) not null,
+    lastname  varchar(36) not null,
     password      varchar(16) not null,
     gender        char,
-    dateofbirth   timestamp,
+    dateofbirth   varchar(50),
     email         varchar(50) unique
 --     created_at    timestamp default current_timestamp,
 --     updated_at    timestamp default current_timestamp
@@ -48,7 +48,7 @@ create table resumes
     updated_at   timestamp default current_timestamp
 );
 
-insert into users (userfirstname, userlastname, password, gender, dateofbirth, email)
+insert into users (firstname, lastname, password, gender, dateofbirth, email)
 values ('Иван', 'Иванов', '', 'M', '1980-01-01', 'ivan@email.ru');
 
 insert into works (user_id, organization, post, startwork, endwork, progress)

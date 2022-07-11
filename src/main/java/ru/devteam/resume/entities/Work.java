@@ -1,4 +1,4 @@
-package ru.devteam.entities;
+package ru.devteam.resume.entities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
