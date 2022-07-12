@@ -10,7 +10,7 @@ import ru.devteam.service.EducationService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/educations")
+@RequestMapping("/api/v1/educations")
 @RequiredArgsConstructor
 public class EducationController {
     private final EducationService educationService;

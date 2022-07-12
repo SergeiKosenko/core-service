@@ -10,7 +10,7 @@ import ru.devteam.service.ResumeService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/resumes")
+@RequestMapping("/api/v1/resumes")
 @RequiredArgsConstructor
 public class ResumeController {
     private final ResumeService resumeService;

@@ -10,7 +10,7 @@ import ru.devteam.service.WorkService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/works")
+@RequestMapping("/api/v1/works")
 @RequiredArgsConstructor
 public class WorkController {
     private final WorkService workService;
